@@ -9,12 +9,14 @@ f1.close()
 f2.close()
 
 
-f1 = open("firstfile.txt", "a+")
-f2 = open("secondfile.txt", "r")
+f1 = open("firstfile.txt", "r")
+f2 = open("secondfile.txt", "w")
 
-f1.write(f2.read())
+f2.write(f1.read())
 
 
+
+f2.seek(0)
 f1.seek(0)
 
 print("Content of first file after appending:\n", f1.read())
